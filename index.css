@@ -9,6 +9,10 @@
     text-decoration: none;
     border: none;
 }
+
+html{
+    scroll-behavior: smooth;
+}
 body{
     position: relative;
     background: #ADA996;  /* fallback for old browsers */
