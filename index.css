@@ -11,6 +11,10 @@
 }
 body{
     position: relative;
+    background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
                 /* En-tête */
 header{
@@ -31,6 +35,9 @@ header h1{
     font-size: 25px;
     font-weight: bold;
 }
+header .toggle-menu{
+    display: none;
+}
 header span{
     color: #ea1f33;
 }
@@ -42,13 +49,14 @@ nav ul li{
     margin: 0 15px;
 }
 nav ul li a{
-    font-size: 14px;
+    font-size: 15px;
     color: #000;
     font-weight: 300;
     transition: 0.2s;
 }
 nav ul li a:hover{
     color: #ea1f33;
+    font-weight: bolder;
 
 }
 header button{
@@ -56,6 +64,11 @@ header button{
     color: #fff;
     padding: 5px 25px;
     cursor: pointer;
+
+}
+header button:hover{
+    background-color: #fff;
+    color: #ea1f33;
 
 }
             /* Page d'accueill */
@@ -209,7 +222,7 @@ section .title:after{
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
-    width: 25%;
+    width: 28%;
     margin: 20px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0 ,0, 0.3);
@@ -269,6 +282,7 @@ section .title:after{
     flex-direction: column;
     text-align: center;
     padding: 0 12%;
+    margin-bottom: 20px;
 }
 .localisation{
     display: flex;
@@ -299,26 +313,41 @@ section .title:after{
     margin-bottom: 10px;
     font-size: 18px;
 }
+.form_contact{
+    width: 51%;
+    box-shadow: 0 0 10px rgba(0, 0 ,0, 0.3);
 
+    
 
+}
 
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+textarea, input{
+    border: 1px solid #ccc;
+    width: 100%;
+    resize: none;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
 
+form input [type="submit"]{
+    background-color: #fff;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer{
+    height: 100px;
+    background-color: #ea1f33;
+}
                     /* Responsive */
-@media (max-width:685px){
+
+
+@media (max-width:800px){
         #home{
             padding: 0 10px;
             justify-content: center;
@@ -337,8 +366,38 @@ section .title:after{
         ul .car {
             width: 100%;
         }
-        .service div{
-            flex-wrap: wrap;
+        #services .listedeservices .service{
+            width: 100%;
+      
+
         }
 
-}
+    }
+        @media (max-width:1500px){
+
+            .localisation_contact_div{
+                flex-wrap: wrap;
+            }
+            .localisation{
+                width: 100%;
+            }
+            
+
+        }
+
+
+        @media (max-width:645px){
+
+            header nav{
+                display: none;
+            }
+
+            header .toggle-menu{
+                display: flex;
+                font-size: 35px;
+            }
+        }
+
+
+
+    
