@@ -12,11 +12,10 @@
 body{
     position: relative;
     background: #ADA996;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-                /* En-tête */
+                                                                /* En-tête */
 header{
     z-index: 20;
     position: fixed;
@@ -57,6 +56,7 @@ nav ul li a{
 nav ul li a:hover{
     color: #ea1f33;
     font-weight: bolder;
+    font-size: 20px;
 
 }
 header button{
@@ -71,7 +71,7 @@ header button:hover{
     color: #ea1f33;
 
 }
-            /* Page d'accueill */
+                                                                                                    /* Page d'accueill */
 #home{
     margin-top: 50px;
     height: calc(100vh - 50px);
@@ -120,7 +120,7 @@ header button:hover{
     width: 100%;
 }
 
-            /* Catalogue de voiture */
+                                                                                                    /* Catalogue de voiture */
 #cars{
     display: flex;
     align-items: center;
@@ -201,6 +201,7 @@ section .title:after{
     transform: scale(1.1);
     margin: 20px
 }
+                                                                                                    /* Service de la société */
 #services{
     display: flex;
     align-items: center;
@@ -272,7 +273,8 @@ section .title:after{
     text-align: center;
     justify-content: center;
     align-items: center;
-}
+}       
+                                                                                            /* Contact de la société */
 
 #contact{
     height: 100vh;
@@ -291,7 +293,7 @@ section .title:after{
     box-shadow: 0 0 10px rgba(0, 0 ,0, 0.3);
     width: 49%;
     padding: 15px;
-    border-radius: 6px;
+    border-radius: 10px;
     
 }
 .localisation_contact_div{
@@ -299,14 +301,14 @@ section .title:after{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 100px 0;
+    margin: 00px 0;
     height: 80vh;
 }
 
 
 .localisation iframe{
     width: 100%;
-    border-radius: 6px;
+  
 }
 
 .localisation_contact_div .section_title{
@@ -316,10 +318,14 @@ section .title:after{
 .form_contact{
     width: 51%;
     box-shadow: 0 0 10px rgba(0, 0 ,0, 0.3);
+    margin: 20px;
+    border-radius: 10px;
 
     
 
 }
+
+                                                                            /* Formulaire de la société */
 
 form{
     display: flex;
@@ -336,14 +342,7 @@ textarea, input{
     margin-bottom: 10px;
 }
 
-form input [type="submit"]{
-    background-color: #fff;
-}
 
-footer{
-    height: 100px;
-    background-color: #ea1f33;
-}
                     /* Responsive */
 
 
@@ -371,6 +370,7 @@ footer{
       
 
         }
+    
 
     }
         @media (max-width:1500px){
@@ -379,6 +379,9 @@ footer{
                 flex-wrap: wrap;
             }
             .localisation{
+                width: 100%;
+            }
+            .form_contact{
                 width: 100%;
             }
             
